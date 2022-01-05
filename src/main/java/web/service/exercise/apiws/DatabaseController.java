@@ -24,15 +24,15 @@ public class DatabaseController {
         })
     
     @ResponseBody
-    public List<Game> getDataMahasiswaXML(){
+    public List<Game> getDataGameXML(){
         
-        List<Game> datamahasiswa =  new ArrayList<>();
+        List<Game> datagame =  new ArrayList<>();
         GameJpaController controller = new GameJpaController();
         try{
-            datamahasiswa = controller.findGameEntities();
+            datagame = controller.findGameEntities();
         }
         catch (Exception e) {}
-        return datamahasiswa;
+        return datagame;
     }
     @CrossOrigin
     @GetMapping(value="/game/json", produces= {
@@ -40,15 +40,15 @@ public class DatabaseController {
     }) 
     
     @ResponseBody
-    public List<Game> getDataMahasiswaJson(){
+    public List<Game> getDataGameJson(){
         
-        List<Game> datamahasiswa =  new ArrayList<>();
+        List<Game> datagame =  new ArrayList<>();
         GameJpaController controller = new GameJpaController();
         try{
-            datamahasiswa = controller.findGameEntities();
+            datagame = controller.findGameEntities();
         }
         catch (Exception e) {}
-        return datamahasiswa;
+        return datagame;
     }
     
 }
